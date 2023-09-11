@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
+}
+#container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 300px auto;
+  width: 80%;
+  background-color: white;
+}
+#img1 {
+  background-image: url("https://gifdb.com/images/high/cookie-monster-om-lunch-time-nz0o6wvi7oew5ebk.gif");
+}
+#img2 {
+  background-image: url("https://gifdb.com/images/high/seinfield-finally-seeing-each-other-celebration-dance-8bjp1zglqk8tdnfj.gif");
+}
+#img3 {
+  background-image: url("https://gifdb.com/images/high/high-five-emoji-mesfnan8wfgslelw.gif");
+}
+.image {
+  border: 10px solid rgb(247, 208, 193);
+  border-radius: 20px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  background-size: cover;
+}
+.text {
+  color: white;
+  background-color: rgb(156, 150, 150);
+  text-align: center;
+  height: 256px;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  position: absolute;
+  top: 320px;
+  transition: top 2s;
+  opacity: 0.7;
+}
+.text p {
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0;
+}
+.image_item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.image_item:hover .text {
+  top: 10px;
+}

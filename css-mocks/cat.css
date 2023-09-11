@@ -1,0 +1,17 @@
+div {
+  width: 30%;
+  margin: 0 auto;
+  background-color: lightgray;
+  border-radius: 15px;
+}
+img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+h2 {
+  border-bottom: 1px solid rgb(189, 185, 185);
+  padding: 0 40px 20px 20px;
+}
+p {
+  padding: 10px 20px 30px;
+}

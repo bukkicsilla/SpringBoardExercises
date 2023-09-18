@@ -24,8 +24,8 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
-    newPhrase = [c for c in list(phrase.lower()) if c != " "]
-    return newPhrase == newPhrase[::-1]
+    new_phrase = [c for c in list(phrase.lower()) if c != " "]
+    return new_phrase == new_phrase[::-1]
 
 
 if __name__ == "__main__":

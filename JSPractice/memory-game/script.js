@@ -68,7 +68,7 @@ function handleCardClick(event) {
     card1 = event.target;
     event.target.classList.toggle(event.target.dataset.color);
     phase = 1;
-  } else {
+  } else if (phase === 1) {
     card2 = event.target;
     event.target.classList.toggle(event.target.dataset.color);
     //cards has the same color
@@ -77,15 +77,19 @@ function handleCardClick(event) {
       card2.classList.add("disabled");
       card1.removeEventListener("click", handleCardClick);
       card2.removeEventListener("click", handleCardClick);
+      phase = 0;
     }
     //cards has different colors
     else {
+      phase = 2;
       setTimeout(function () {
         card1.classList.remove(card1.dataset.color);
         card2.classList.remove(card2.dataset.color);
+        phase = 0;
       }, 1000);
     }
-    phase = 0;
+  } else {
+    console.log("WAITING", phase);
   }
 }
 

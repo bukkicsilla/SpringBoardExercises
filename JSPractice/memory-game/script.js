@@ -90,6 +90,7 @@ function handleCardClick(event) {
     }
   } else {
     console.log("WAITING", phase);
+    return;
   }
 }
 

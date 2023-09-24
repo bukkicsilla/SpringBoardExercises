@@ -1,0 +1,27 @@
+#game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background-color: orange;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+#game .disabled {
+  opacity: 0.69;
+  cursor: default;
+}

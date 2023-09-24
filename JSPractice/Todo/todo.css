@@ -1,0 +1,54 @@
+body {
+  background-color: rgba(243, 227, 138, 0.898);
+}
+form {
+  margin: 5rem auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+label,
+li,
+button {
+  font-size: 2rem;
+}
+label {
+  color: purple;
+}
+input {
+  width: 250px;
+  margin: 0 2rem;
+  border-radius: 8px;
+  /*box-shadow: 5px 5px 5px blueviolet;*/
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+button {
+  background-color: blueviolet;
+  color: snow;
+  width: 150px;
+  border-radius: 8px;
+}
+ul {
+  list-style: none;
+  width: 60%;
+  margin: 0 auto;
+  border: 3px double blueviolet;
+  height: 50vh;
+  padding: 5px;
+  text-align: center;
+}
+span {
+  font-size: inherit;
+  float: right;
+  color: red;
+}
+.done {
+  text-decoration: line-through silver;
+  color: #9fe2bf;
+}

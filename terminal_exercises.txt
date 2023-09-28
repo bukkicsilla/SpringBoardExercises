@@ -1,0 +1,28 @@
+Part I
+
+1. mkdir first
+2. cd first
+3. touch person.txt
+4. mv person.txt another.txt
+5. cp another.txt copy.txt
+6. rm copy.txt
+7. cd .. and cp -r first second
+8. rm -rf second
+
+Part II
+ 
+1. man means manual and it displays the user info of any command. I can scroll with the arrow keys. 
+To leave the manual the letter 'q' should be pressed.  
+2. ls -l gives the list in long format. A total sum for all the file sizes is output on a line before the long listing.
+ls -a prints everything which includes hidden directories too.
+3. Jumping between words is possible by using option with right or left arrow keys.
+4. You have to use control and e 
+5. You have to use control and a
+6. You have to use control and w 
+7. The shell is the name of the program that runs in the terminal which is a command line interpreter. 
+8.The absolute path starts with the root slash (meaning the root foolder) and nested folders follow until the innermost folder.
+9. The relative path starts at the current location (you can check with pwd)  and ends with the innermost folder.
+10. A flag: it usually acts as a boolean variable indicating a condition to be either true or false. 
+Examples with flags: ls -Sal,  rm -rf and cp -r.
+11. -r flag means: attempt to remove the file hierarchy rooted in each file argument. 
+-f flag means: attempt to remove the files without prompting for confirmation, regardless of the file's permissions.

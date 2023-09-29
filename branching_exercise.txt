@@ -1,0 +1,7 @@
+1. git branch branch_name or git checkout -b branch_name
+2. These are git merging strategies. Fast-forward  merge is possible, if there is no conflict. 
+   Recursive merging happens when there is a conflict.
+3. git checkout branch_name
+4. git branch -d branch_name  or git branch -D branch_name
+5. If there is a conflict git puts both source code in the file(s) and the conflict has to be resolved manually.
+   What is not needed, should be deleted, and what is needed, should be kept in the file(s).

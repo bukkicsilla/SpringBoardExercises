@@ -1,0 +1,44 @@
+Part One
+
+What is HTTP? 
+HTTP (Hypertext Transfer Protocol) is a way computers communicate on the internet, 
+making web pages and data exchange possible.
+What is a URL?
+A URL (Uniform Resource Locator) is a web address that helps find and access websites or files on the internet.
+What is DNS?
+DNS (Domain Name System) is like the internet's phonebook, 
+translating website names (e.g., google.com) into computer-friendly IP addresses.
+What is a query string?
+A query string is extra information in a URL that helps web pages gather specific data or perform actions.
+What are two HTTP verbs and how are they different?
+Two HTTP verbs are GET and POST. GET is used to request data from a server, 
+like loading a web page, while POST is used to send data to a server, such as submitting a form on a website. 
+The key difference is that GET is for retrieving information, 
+and POST is for sending and updating information on the server.
+What is an HTTP request?
+An HTTP request is like asking a server for something on the internet. 
+It's a message sent from a web browser or application to a web server, 
+specifying what is needed, like a web page or data.
+What is an HTTP response?
+An HTTP response is like the answer from a server on the internet. 
+It's a message sent back to a web browser or application after an HTTP request, 
+containing the requested information, like a web page, or indicating an error.
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+An HTTP header is like a note attached to an HTTP request or response, providing information. Examples:
+Request Headers: Accept-Language: fr, Accept: application/json, Response Headers: Content-Type, Location. 
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+1. Browser looks up DNS to find the IP for "somesite.com."
+2. Browser sends an HTTP request to that IP for "/some/page.html."
+3. Server responds with the requested page.
+4. Browser displays the page.
+
+Part Two
+1. Using ***curl***, make a ***GET*** request to the *icanhazdadjoke.com* 
+API to find all jokes involving the word “pirate”.
+curl -H "Accept: application/json" "https://icanhazdadjoke.com/search?term=pirate"
+
+2. Use ***dig*** to find what the IP address is for *icanhazdadjoke.com*
+dig +short icanhazdadjoke.com
+
+3. Make a simple web page and serve it using ***python3 -m http.server***. Visit the page in a browser. DONE
+

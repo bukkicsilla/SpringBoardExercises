@@ -7,7 +7,7 @@ content %}
   <div>
     <img src="{{user.image_url}}" alt="{{user.first_name}}" />
   </div>
-  <!--<h2>{{user.first_name}} {{user.last_name}}</h2>-->
+  <h2>{{user.first_name}} {{user.last_name}}</h2>
   <form class="form_modif" action="/users" method="POST">
     <a class="btn btn-success" href="/users/{{user.id}}/edit">Edit</a>
   </form>

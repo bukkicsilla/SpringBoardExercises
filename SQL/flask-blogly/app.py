@@ -1,6 +1,6 @@
 """Blogly application."""
 
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, flash
 from flask_debugtoolbar import DebugToolbarExtension
 from models import db, connect_db, User
 
@@ -37,10 +37,10 @@ def create_user():
     last_name = request.form["last_name"]
     image_url = request.form["image_url"]
     if not first_name:
-        print("First name cannot be empty!")
+        flash("Firstname cannot be empty!", "invalid")
         return redirect("/users")
     if not last_name:
-        print("Last name cannot be empty!")
+        flash("Lastname cannot be empty!", "invalid")
         return redirect("/users")
     new_user = User(first_name=first_name, last_name=last_name, image_url=image_url)
     db.session.add(new_user)
@@ -51,7 +51,8 @@ def create_user():
 def show_user(user_id):
     '''Shows details about a single user'''
     user = User.query.get(user_id)
-    fullname = user.get_full_name()
+    #fullname = user.get_full_name()
+    fullname = user.fullname
     greeting = user.greet()
     return render_template('user.html', user=user, greeting=greeting, fullname=fullname)
 
@@ -77,10 +78,10 @@ def edit_user(user_id):
     last_name = request.form["last_name"]
     image_url = request.form["image_url"]
     if not first_name:
-        print("First name cannot be empty!")
+        flash("Firstname cannot be empty!", "invalid")
         return redirect(f"/users/{user_id}")
     if not last_name:
-        print("Last name cannot be empty!")
+        flash("Lastname cannot be empty!", "invalid")
         return redirect(f"/users/{user_id}")
     user = User.query.filter_by(id=user_id).first()
     user.first_name = first_name

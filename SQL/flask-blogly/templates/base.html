@@ -20,6 +20,7 @@
     {% for category, msg in get_flashed_messages(with_categories=true) %}
     <h2 class="{{category}}">{{msg}}<span>x</span></h2>
     {% endfor %} {% block content %} {% endblock %}
+    <script src="https://unpkg.com/jquery"></script>
     <script src="{{ url_for('static', filename='scripts/blogly.js')}}"></script>
   </body>
 </html>

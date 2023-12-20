@@ -1,0 +1,9 @@
+body {
+  background-color: #fdf0d5;
+}
+img {
+  width: 20rem;
+}
+.form_modif {
+  display: inline-block;
+}

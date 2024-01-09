@@ -90,7 +90,7 @@ class DLinkedList {
       current.prev = null;
     }
     this.length--;
-    return current;
+    return current.val;
   }
 
   /** shift(): return & remove first item. */
@@ -107,7 +107,7 @@ class DLinkedList {
       oldHead.next = null;
     }
     this.length--;
-    return oldHead;
+    return oldHead.val;
   }
 
   /** getAt(idx): get val at idx. */
@@ -188,6 +188,21 @@ class DLinkedList {
       current = current.next;
     }
     return sum / this.length;
+  }
+  reverse() {
+    let last, first;
+    let count = this.length - 2;
+    for (let i = count; i > -1; i--) {
+      let current = this._getNode(i);
+      if (i === count) {
+        last = current;
+      }
+      if (i === 0) {
+        first = current;
+      }
+      current.next.next = current;
+      current.next = null;
+    }
   }
 }
 
